@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Registro Usuario
+{% endblock %}
+
+{% block contenido %}
+{% if form.errors %}
+    <strong>
+        hay errores en el formulario
+    </strong>
+{% endif %}
+<form action="crear_autor" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Registrarse">
+</form>
+{% endblock %}
