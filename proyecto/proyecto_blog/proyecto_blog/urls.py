@@ -24,7 +24,9 @@ from app_blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
-    path('registro', views.registro, name="registro")
+    path('registro', views.registro, name="registro"),
+    path('crear_autor', views.crear_autor, name="crear_autor"),
+    path('login', views.login, name="login")
 ]
 
 """if(settings.DEBUG):
